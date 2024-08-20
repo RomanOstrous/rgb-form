@@ -1,0 +1,69 @@
+@import '../utils/utils';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0 0;
+  margin-bottom: 40px;
+  width: 100%;
+
+  @include on-desktop {
+    padding: 24px 0;
+    margin-bottom: 90px;
+  }
+
+  &__logo {
+    width: 101px;
+    height: 32px;
+
+    @include on-desktop {
+      width: 182px;
+      height: 56px;
+    }
+  }
+
+  &__data {
+    display: flex;
+    gap: 6px;
+
+    @include on-desktop {
+      gap: 18px;
+    }
+
+    &-container {
+      display: flex;
+      align-items: center;
+
+      gap: 4px;
+      padding: 0 6px;
+      height: 24px;
+      background: #302E5A;
+      border-radius: 10px;
+
+      @include on-desktop {
+        height: 40px;
+      }
+    }
+
+    &-ico {
+      width: 11px;
+      height: 11px;
+
+      @include on-desktop {
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+    &-text {
+      font-size: 11px;
+      font-weight: 600;
+      color: #fff;
+
+      @include on-desktop {
+        font-size: 14px;
+      }
+    }
+  }
+}

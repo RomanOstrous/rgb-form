@@ -1,0 +1,14 @@
+@import "./utils/utils";
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/Gilroy-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Gilroy', sans-serif;
+  background-color: #242731;
+  padding: 15px;
+}

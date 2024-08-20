@@ -1,0 +1,13 @@
+@import '../utils/utils';
+
+.app {
+  max-width: 1040px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+
+  @include on-desktop {
+    padding: 0 56px;
+  }
+}

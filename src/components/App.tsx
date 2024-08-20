@@ -2,6 +2,8 @@ import Header from "./Header";
 import '../styles/components/App.scss';
 import Information from "./Information";
 import { useEffect, useState } from "react";
+import Author from "./Author";
+import Footer from "./Footer";
 
 const App = () => {
 
@@ -20,20 +22,26 @@ const App = () => {
   }, []);
 
   return (
-    <div className="app">
-      <Header/>
+    <>
+      <div className="app">
+        <Header/>
 
-      {isDesktop
-        ? (
-          <main className="app__container">
-            <Information />
-          </main>
-        ) : (
-          <main className="app__container">
-            <Information />
-          </main>
-        )}
-    </div>
+        {isDesktop
+          ? (
+            <main className="app__container">
+              <Information />
+              <Author />
+            </main>
+          ) : (
+            <main className="app__container">
+              <Information />
+              <Author />
+            </main>
+          )}
+      </div>
+
+      {isDesktop && (<Footer />)}
+    </>
   )
 }
 

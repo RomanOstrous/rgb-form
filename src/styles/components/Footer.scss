@@ -1,0 +1,22 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  height: 120px;
+
+  &__text {
+    display: flex;
+    text-wrap: nowrap;
+    font-size: 7.4vw;
+    font-variant: small-caps;
+    font-weight: 800;
+    color: #242731;
+    -webkit-text-stroke: 2px #4d4d4d;
+  }
+
+  @media screen and (max-width: 1440px) {
+    &__text {
+        transform: scaleX(calc(100vw / 1440)); /* Масштабування по ширині */
+    }
+}
+}

@@ -30,4 +30,42 @@
       min-height: calc(100vh - 120px - 198px);
     }
   }
+
+  &__rect1 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom: 0;
+    right: calc(50% - 100px);
+    border-radius: 50%;
+    filter: blur(100px);
+    background: rgb(51, 47, 101);
+    z-index: -1;
+
+    @include on-desktop {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      top: 0px;
+      right: 0;
+      border-radius: 50%;
+      filter: blur(100px);
+      background: rgb(51, 47, 101);
+      z-index: -1;
+    }
+  }
+
+  &__rect2 {
+    @include on-desktop {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      filter: blur(100px);
+      background: rgb(51, 47, 101);
+      z-index: -1;
+    }
+  }
 }

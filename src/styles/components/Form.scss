@@ -39,7 +39,6 @@
   &__forma {
     display: flex;
     flex-direction: column;
-    gap: 15px;
     width: 286px;
     margin-bottom: 16px;
 
@@ -83,6 +82,14 @@
           color: #D7D7D7;
         }
       }
+
+      &:hover {
+        border: 1px solid #D7D7D7;
+      }
+
+      &:focus {
+        border: 1px solid #fff;
+      }
     }
 
     &-button {
@@ -109,6 +116,14 @@
         font-size: 13px;
         line-height: 24px;
       }
+
+      &:hover {
+        border: 1px solid #fff;
+      }
+    
+      &:focus {
+        border: 1px solid #fff;
+      }
     }
   }
 
@@ -131,5 +146,52 @@
         color: #FF3459;
       }
     }
+  }
+
+  &__error {
+    height: 10px;
+    color: #FF3459;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 15px;
+  }
+}
+
+.form-control {
+  background-color: #272D3D !important;
+  border: none !important;
+  outline: none !important;
+  font-size: 13px;
+  line-height: 24px;
+  color: #fff;
+  height: 46px !important;
+  width: 286px !important;
+
+  @include on-desktop {
+    width: 250px !important;
+    height: 51px !important;
+  }
+
+  &:hover {
+    border: 1px solid #fff !important;
+  }
+
+  &:focus {
+    border: 1px solid #fff !important;
+  }
+}
+
+.flag-dropdown {
+  background-color: #242731 !important;
+  border: none !important;
+  outline: none !important;
+  
+  &:hover {
+    border: 1px solid #fff;
+  }
+
+  &:focus {
+    border: 1px solid #fff;
   }
 }

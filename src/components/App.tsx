@@ -25,9 +25,10 @@ const App = () => {
 
   return (
     <>
+      <span className="app__rect1"></span>
+      <span className="app__rect2"></span>
       <div className="app">
         <Header/>
-        
         <AsideIcons />
 
         {isDesktop

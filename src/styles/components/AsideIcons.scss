@@ -8,48 +8,91 @@
   }
 
   &__html {
-    position: absolute;
     width: 88.28px;
     height: 88.28px;
     left: 1117.61px;
     top: 241.81px;
     transform: rotate(12.30deg);
+
+    &-rect {
+      width: 8px;
+      height: 8px;
+      left: 1210px;
+      top: 260.45px;
+      background: #F16529;
+      border-radius: 50%;
+    }
   }
 
   &__css {
-    position: absolute;
     width: 60.4px;
     height: 85.45px;
     top: 364.22px;
     left: 1018.8px;
     transform: rotate(-21.66deg);
+
+    &-rect {
+      width: 6px;
+      height: 6px;
+      top: 338.45px;
+      left: 1070px;
+      background: #2965F1;
+      border-radius: 50%;
+    }
   }
 
   &__js {
-    position: absolute;
     width: 120px;
     height: 72.94px;
     left: 1144.16px;
     top: 404.2px;
     transform: rotate(15.82deg);
+
+    &-rect {
+      width: 8px;
+      height: 8px;
+      top: 424.45px;
+      left: 1250px;
+      background: #F0BE25;
+      border-radius: 50%;
+    }
   }
 
   &__sub {
-    position: absolute;
     width: 53.93px;
     height: 53.93px;
     top: 498.06px;
     left: 1021px;
     transform: rotate(-15.12deg);
+
+    &-rect {
+      width: 6px;
+      height: 6px;
+      top: 481px;
+      left: 1069px;
+      background: #FF9800;
+      border-radius: 50%;
+    }
   }
 
   &__vs {
-    position: absolute;
     width: 60.62px;
     height: 60.62px;
     top: 568.29px;
     left: 1096px;
     transform: rotate(-20.56deg);
+
+    &-rect {
+      width: 6px;
+      height: 6px;
+      top: 608px;
+      left: 1178px;
+      background: #48AEF3;
+      border-radius: 50%;
+    }
   }
 }
 
+.absolute {
+  position: absolute;
+}

@@ -23,7 +23,7 @@
 
     @include on-desktop {
       display: block;
-      height: calc(100vh - 320px);
+      min-height: calc(100vh - 120px - 198px);
     }
   }
 }

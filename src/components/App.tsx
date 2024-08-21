@@ -8,7 +8,6 @@ import Form from "./Form";
 import AsideIcons from "./AsideIcons";
 
 const App = () => {
-
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 800);
 
   useEffect(() => {

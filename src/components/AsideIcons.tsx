@@ -8,6 +8,7 @@ const AsideIcons = () => {
       <img className="images__js absolute" src="imgs/js.png"/>
       <img className="images__sub absolute" src="imgs/subl.png"/>
       <img className="images__vs absolute" src="imgs/vs.png"/>
+      
       <span className="images__html-rect absolute"></span>
       <span className="images__css-rect absolute"></span>
       <span className="images__js-rect absolute"></span>

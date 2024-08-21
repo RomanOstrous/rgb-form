@@ -4,6 +4,8 @@ import Information from "./Information";
 import { useEffect, useState } from "react";
 import Author from "./Author";
 import Footer from "./Footer";
+import Form from "./Form";
+import AsideIcons from "./AsideIcons";
 
 const App = () => {
 
@@ -25,16 +27,23 @@ const App = () => {
     <>
       <div className="app">
         <Header/>
+        
+        <AsideIcons />
 
         {isDesktop
           ? (
             <main className="app__container">
-              <Information />
-              <Author />
+              <div className="app__container-info">
+                <Information />
+                <Author />
+              </div>
+
+              <Form />
             </main>
           ) : (
             <main className="app__container">
               <Information />
+              <Form />
               <Author />
             </main>
           )}

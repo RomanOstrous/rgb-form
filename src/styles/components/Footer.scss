@@ -1,15 +1,23 @@
+@import '../utils/utils';
+
 .footer {
+  position: relative;
   display: flex;
   justify-content: center;
   overflow: hidden;
   height: 120px;
 
-  &__text {
-    display: flex;
+  &::after {
+    position: absolute;
+    content: 'FRONT-END DEVELOPER';
+    font-size: 80px;
     text-wrap: nowrap;
-    font-size: 7.3vw;
     font-weight: 800;
     color: #242731;
     -webkit-text-stroke: 1px #4d4d4d;
+
+    @include on-desktop1440 {
+      font-size: 100px;
+    }
   }
 }

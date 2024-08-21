@@ -1,0 +1,55 @@
+@import '../utils/utils';
+
+.images {
+  display: none;
+
+  @include on-desktop1440 {
+    display: block;
+  }
+
+  &__html {
+    position: absolute;
+    width: 88.28px;
+    height: 88.28px;
+    left: 1117.61px;
+    top: 241.81px;
+    transform: rotate(12.30deg);
+  }
+
+  &__css {
+    position: absolute;
+    width: 60.4px;
+    height: 85.45px;
+    top: 364.22px;
+    left: 1018.8px;
+    transform: rotate(-21.66deg);
+  }
+
+  &__js {
+    position: absolute;
+    width: 120px;
+    height: 72.94px;
+    left: 1144.16px;
+    top: 404.2px;
+    transform: rotate(15.82deg);
+  }
+
+  &__sub {
+    position: absolute;
+    width: 53.93px;
+    height: 53.93px;
+    top: 498.06px;
+    left: 1021px;
+    transform: rotate(-15.12deg);
+  }
+
+  &__vs {
+    position: absolute;
+    width: 60.62px;
+    height: 60.62px;
+    top: 568.29px;
+    left: 1096px;
+    transform: rotate(-20.56deg);
+  }
+}
+

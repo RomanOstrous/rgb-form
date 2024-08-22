@@ -14,7 +14,7 @@ const botId = import.meta.env.VITE_TELEGRAM_BOT_ID;
 
 const validateName = (value: string) => {
   const parts = value.trim().split(/\s+/);
-  return parts.every(part => /^[A-ZА-Я][a-zа-я]*$/.test(part)) || "Ім'я та прізвище повинні починатися з великої літери";
+  return parts.every(part => /^[A-ZА-Я][a-zа-я]*$/.test(part)) || "Имя и фамилия с большой букви";
 };
 
 const Form = () => {
@@ -46,18 +46,18 @@ const Form = () => {
         throw new Error('Не вдалося надіслати повідомлення');
       }
 
-      console.log('Повідомлення успішно надіслано');
+      console.log('успішно надіслано');
     } catch (error) {
-      console.error('Помилка при відправці повідомлення:', error);
+      console.error('Помилка :', error);
     }
   };
 
   return (
     <section className="form">
       <p className='form__title info__white'>
-        Запишіться
-        <span className='form__title-color'> безкоштовно </span><br />
-        і отримайте подарунок
+      Запишитесь
+        <span className='form__title-color'> бесплатно </span><br />
+        и получите подарок
       </p>
 
       <form 
@@ -67,10 +67,10 @@ const Form = () => {
       >
         <input 
           className={`form__forma-input ${errors.fullName ? 'form__input-error' : ''}`}
-          placeholder="Ваше ім'я та прізвище"
+          placeholder="Ваше имя и фамилия"
           {...register("fullName", {
-            required: "Введіть ім'я та прізвище",
-            maxLength: { value: 40, message: "Максимум 40 символів" },
+            required: "Введите имя и фамилию",
+            maxLength: { value: 20, message: "Максимум 20 символов" },
             validate: validateName
           })} 
         />
@@ -84,10 +84,10 @@ const Form = () => {
             required: true,
           }}
           {...register("phone", {
-            required: "Введіть номер телефону",
+            required: "Введите ваш телефон",
             validate: (value) => {
               const phoneNumberLength = value.replace(/[^0-9]/g, '').length;
-              return phoneNumberLength >= 10 || "Введіть валідний номер";
+              return phoneNumberLength >= 10 || "Введите валидний номер";
             }
           })}
           onChange={phone => setValue("phone", phone, { shouldValidate: false })}
@@ -98,10 +98,10 @@ const Form = () => {
           className={`form__forma-input ${errors.mail ? 'form__input-error' : ''}`}
           placeholder="Ваш email"
           {...register("mail", {
-            required: "Введіть свій email",
+            required: "Введите свой email",
             pattern: {
               value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-              message: "Введіть валідний email"
+              message: "Введите валидний email"
             }
           })} 
         />
@@ -110,13 +110,13 @@ const Form = () => {
         <input 
           className="form__forma-button"
           type="submit" 
-          value='Записатися безкоштовно' 
+          value='Записаться бесплатно' 
         />
       </form>
 
       <p className="form__konfid info__white">
-        Натискаючи на кнопку я погоджуюсь <br /> 
-        <span className="form__konfid-link">з політикою конфіденційності</span>
+        Нажимая на кнопку я согашаюсь <br /> 
+        <span className="form__konfid-link">с политикой конфидециальности</span>
       </p>
     </section>
   );

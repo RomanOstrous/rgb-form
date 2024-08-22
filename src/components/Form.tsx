@@ -9,6 +9,9 @@ interface IFormInput {
   phone: string;
 }
 
+const botT = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
+const botId = import.meta.env.VITE_TELEGRAM_BOT_ID;
+
 const validateName = (value: string) => {
   const parts = value.trim().split(/\s+/);
   return parts.every(part => /^[A-ZА-Я][a-zа-я]*$/.test(part)) || "Ім'я та прізвище повинні починатися з великої літери";
@@ -19,8 +22,8 @@ const Form = () => {
   
   const onSubmit: SubmitHandler<IFormInput> = async (data) => {
     try {
-      const botToken = '7268050885:AAEtftEU_GPL5MzgV6u5uYG1g1_ydaWizVc';
-      const chatId = '738465465';
+      const botToken = botT;
+      const chatId = botId;
       const message = `
         Тестове повідомлення:
         Ім'я та прізвище: ${data.fullName}

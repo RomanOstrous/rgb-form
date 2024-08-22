@@ -55,7 +55,7 @@ const Form = () => {
   return (
     <section className="form">
       <p className='form__title info__white'>
-      Запишитесь
+        Запишитесь
         <span className='form__title-color'> бесплатно </span><br />
         и получите подарок
       </p>
